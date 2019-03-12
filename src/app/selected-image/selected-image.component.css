@@ -1,0 +1,44 @@
+.banner {
+  width: 100%;
+  padding: 5px;
+  background: #191919;
+  min-height: 500px;
+
+}
+
+.picture-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.picture {
+  padding-top: 5%;
+  width: 50%;
+  float: left;
+
+
+}
+
+#selected {
+  max-width: 455px;
+  width: auto;
+  max-height: 410px;
+}
+
+.toolbar {
+  padding-top: 5%;
+  text-align: center;
+  width: 50%;
+  float: right;
+}
+
+.toolbar h5 {
+  color: white;
+}
+
+.btn {
+  background: #808080;
+  margin: 20px;
+}

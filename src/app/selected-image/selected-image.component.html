@@ -1,0 +1,20 @@
+<div class="container-fluid banner">
+  <div class="picture-block">
+    <div class="picture">
+      <img id="selected" src="{{selectedImg.link}}" alt="Selected Img">
+    </div>
+    <div class="toolbar">
+      <h5>{{selectedImg.title}}</h5>
+      <div class="buttons">
+        <button type="button" class="btn" (click)="viewArticleInNewTab()">
+          View on Site
+        </button>
+        <button type="button" class="btn" (click)="openInNewTab()">
+          View Image In New Tab
+        </button>
+      </div>
+      <hr>
+
+    </div>
+  </div>
+</div>

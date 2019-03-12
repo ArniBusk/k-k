@@ -1,0 +1,27 @@
+<!--Grid View-->
+<div class="container-fluid grid-deck" *ngIf="images && gridView">
+  <div class="container-fluid" *ngIf="selectedImg">
+    <app-selected-image [selectedImg]="selectedImg"></app-selected-image>
+  </div>
+  <div class="card-deck">
+    <div class="img-box" *ngFor="let i of images" (click)="selectImage(i)">
+      <img class="card-img" src="{{ i.link }}" alt="photo" srcset="" />
+    </div>
+  </div>
+</div>
+<!--List View-->
+<div class="container" *ngIf="images && !gridView">
+  <div class="list-deck">
+    <div class="list-box" *ngFor="let i of images" (click)="selectItem(i)">
+      <a href="{{i.image.contextLink}}">
+        <div class="img-slot">
+          <img class="list-img" src="{{ i.link }}" alt="photo" srcset="" title="{{i.image.contextLink}}" />
+        </div>
+        <div class="list-text">
+          <h2 style="color: white">{{i.title}}</h2>
+        </div>
+        <h6>{{i.image.contextLink}}</h6>
+      </a>
+    </div>
+  </div>
+</div>

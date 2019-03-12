@@ -1,0 +1,17 @@
+<div class="container-fluid searchBg">
+  <h1>Search</h1>
+  <div class="input-group">
+    <input id="searchBar" #searchBar type="text" class="form-control mr-sm-2" (keyup.enter)='$event.target.blur();onEnter(searchBar.value)'>
+  </div>
+  <div class="toggle-block">
+    <div class="thumbnail">
+      <img src="src\assets\iconfinder_Grid_778081.png" alt="" (click)="selectView(true)" [ngClass]="{'selected': localDisplayBoolean}">
+    </div>
+    <div class="thumbnail">
+      <img id="list" src="src\assets\iconfinder_Menu_778134.png" alt="" (click)="selectView(false)" [ngClass]="{'selected': !localDisplayBoolean}">
+    </div>
+    <div class="thumbnail">
+      <button class="btn" (click)="onEnter(searchBar.value)">Search</button>
+    </div>
+  </div>
+</div>
